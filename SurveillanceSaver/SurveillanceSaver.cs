@@ -42,7 +42,7 @@ namespace SurveillanceSaver
 
         private void SurveillanceSaver_OneSecondTick(object sender, EventArgs e)
         {
-            int n = 60;
+            int n = 120;
             // reroll everything in a staggered way
             for (int i = 0; i < rolls.Length; i++)
             {
