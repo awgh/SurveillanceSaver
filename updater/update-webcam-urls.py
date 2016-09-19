@@ -118,14 +118,32 @@ def googleImageInURLSearch(query, DIR = None, TAG = None):
             
 googleImageInURLSearch("/jpg/image.jpg?r=", "Pictures", "Axis_JPEG")
 googleImageInURLSearch("/mjpg/video.mjpg", "Pictures", "Axis_MJPEG")
+googleImageInURLSearch("/axis-cgi/jpg/image.cgi?resolution=", "Pictures", "Axis2_MJPEG")
 
 googleImageInURLSearch("/record/current.jpg", "Pictures", "Mobotix_JPEG")
 googleImageInURLSearch("/cgi-bin/faststream.jpg?stream=", "Pictures", "Mobotix_MJPEG")
 
-googleImageInURLSearch("/oneshotimage.jpg", "Pictures", "SNC")
+googleImageInURLSearch("/oneshotimage.jpg", "Pictures", "SNC_JPEG")
 
 googleImageInURLSearch("/SnapshotJPEG?Resolution=", "Pictures", "Panasonic_JPEG")
 googleImageInURLSearch("/nphMotionJpeg?Resolution=", "Pictures", "Panasonic_MJPEG")
+
+googleImageInURLSearch("/cgi-bin/video.jpg?resolution=", "Pictures", "Vivotek_JPEG")
+
+googleImageInURLSearch("/Jpeg/CamImg.jpg", "Pictures", "ORite_JPEG")
+
+googleImageInURLSearch("?action-snapshot", "Pictures", "Veo_JPEG")
+googleImageInURLSearch("?action-stream", "Pictures", "Veo_MJPEG")
+googleImageInURLSearch("/GetData.cgi", "Pictures", "Veo2_JPEG")
+
+googleImageInURLSearch("/videostream.cgi", "Pictures", "3G_MJPEG")
+googleImageInURLSearch("/video.cgi?resolution=VGA", "Pictures", "Other1_MJPEG")
+googleImageInURLSearch("/live?camera=", "Pictures", "Other2_MJPEG")
+googleImageInURLSearch("/videofeed", "Pictures", "Other3_MJPEG")
+googleImageInURLSearch("/video?submenu=mjpg", "Pictures", "Other4_MJPEG")
+
+googleImageInURLSearch("/snapshot.jpg?", "Pictures", "Other1_JPEG")
+googleImageInURLSearch("/cgi-bin/snapshot.cgi", "Pictures", "Other2_JPEG")
 
 tree = ET.ElementTree(root)
 tree.write("urls.xml")
